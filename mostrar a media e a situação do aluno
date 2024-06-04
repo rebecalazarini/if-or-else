@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main(){
+    float nota1,nota2,nota3,media,situacao;
+    
+    printf("digite nota1: ");
+    scanf("%f", &nota1);
+    printf("digite a nota2: ");
+    scanf("%f",&nota2);
+    printf("digite a nota3: ");
+    scanf("%f",&nota3);
+    
+    media=(nota1+nota2+nota3)/3;
+    
+    printf("a media é:%1.f", media);
+    
+    if (media >= 95) {
+        printf("\nAluno Ouro");
+    } else if (media >= 85) {
+        printf("\nAluno Prata");
+    } else if (media >= 75) {
+        printf("\nAluno Bronze");
+    } else if (media < 50) {
+        printf("\nAluno retido");
+    } else {
+        printf("\nAprovado");
+    }
+    return 0;
+}
