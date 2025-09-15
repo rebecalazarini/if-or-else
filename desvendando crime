@@ -1,0 +1,53 @@
+// se 2 respostas for s é suspeito
+// 3 ou 4 cumplice
+// 5 assassino
+
+#include<stdio.h>
+
+int main() {
+    char p1, p2, p3, p4, p5;
+
+    printf("Desvendando um crime \n");
+
+    // Coletando as respostas
+    printf("Telefonou para a vítima? (s ou n): ");
+    scanf(" %c", &p1);
+    printf("Esteve no local do crime? (s ou n): ");
+    scanf(" %c", &p2);
+    printf("Mora perto da vítima? (s ou n): ");
+    scanf(" %c", &p3);
+    printf("Devia para a vítima? (s ou n): ");
+    scanf(" %c", &p4);
+    printf("Já trabalhou com a vítima? (s ou n): ");
+    scanf(" %c", &p5);
+
+    if (   (p1 == 's' && p2 == 's' && p3 == 'n' && p4 == 'n' && p5 == 'n')
+        || (p1 == 's' && p2 == 'n' && p3 == 's' && p4 == 'n' && p5 == 'n')
+        || (p1 == 's' && p2 == 'n' && p3 == 'n' && p4 == 's' && p5 == 'n')
+        || (p1 == 's' && p2 == 'n' && p3 == 'n' && p4 == 'n' && p5 == 's')
+        || (p1 == 'n' && p2 == 's' && p3 == 's' && p4 == 'n' && p5 == 'n')
+        || (p1 == 'n' && p2 == 's' && p3 == 'n' && p4 == 's' && p5 == 'n')
+        || (p1 == 'n' && p2 == 's' && p3 == 'n' && p4 == 'n' && p5 == 's')) {
+        printf("Suspeita\n");
+    }
+  
+    else if (   (p1 == 's' && p2 == 's' && p3 == 's' && p4 == 'n' && p5 == 'n')
+             || (p1 == 's' && p2 == 'n' && p3 == 's' && p4 == 's' && p5 == 'n')
+             || (p1 == 's' && p2 == 'n' && p3 == 'n' && p4 == 's' && p5 == 's')
+             || (p1 == 'n' && p2 == 's' && p3 == 's' && p4 == 's' && p5 == 'n')
+             || (p1 == 'n' && p2 == 's' && p3 == 's' && p4 == 'n' && p5 == 'n')
+             || (p1 == 'n' && p2 == 's' && p3 == 'n' && p4 == 's' && p5 == 'n')
+             || (p1 == 'n' && p2 == 's' && p3 == 'n' && p4 == 'n' && p5 == 's')) {
+        printf("Cúmplice\n");
+    }
+  
+    else if ((p1 == 's') + (p2 == 's') + (p3 == 's') + (p4 == 's') + (p5 == 's') == 5) {
+        printf("Assassino\n");
+    }
+   
+    else {
+        printf("Inocente\n");
+    }
+
+    return 0;
+}
