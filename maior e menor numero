@@ -1,0 +1,45 @@
+// Faça um Programa que leia três números e mostre o maior e o menor deles.
+
+#include<stdio.h>
+int main(){
+    int a, b, c;
+    
+    printf("Digite o primeiro nunmero inteiro: ");
+    scanf("%d", &a);
+    
+    printf("Digite o segundo numero inteiro: ");
+    scanf("%d", &b);
+    
+    printf("Digite o terceiro numero inteiro: ");
+    scanf("%d", &c);
+    
+    if (a>b && a>c) {
+    printf ("O numero %d é maior  \n", a);
+
+}else if (b>a && b>c) {
+    printf("O numero %d é maior \n", b);
+    
+}else if (c>a && c>b) {
+    printf("O numero %d é maior \n", c);
+    
+}else{
+printf ("numero inválido ou digitado igual");
+
+}
+
+ if (a<b && a<c) {
+    printf ("O numero %d é menor  \n", a);
+
+}else if (b<a && b<c) {
+    printf("O numero %d é menor \n", b);
+    
+}else if (c<a && c<b) {
+    printf("O numero %d é menor \n", c);
+    
+}else{
+printf ("numero inválido ou digitado igual");
+
+}
+    
+    return 0;
+}
